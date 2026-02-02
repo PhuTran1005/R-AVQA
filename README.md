@@ -6,9 +6,10 @@ Official PyTorch implementation of our paper
 
 <p align="center"> <img src="figures/aurc_curve.png" width="800" align="center"> </p>
 
-:pushpin: *We confirm that the relevant code and implementation details will be available upon acceptance. Please be patient*😇.
+:pushpin: *We confirm that the relevant code and checkpoints will be available upon acceptance. Please be patient*😇.
 
 **📄 Abstract**
+
 We present a formal problem formulation for \textit{Reliable} Audio-Visual Question Answering ($\mathcal{R}$-AVQA), where we prefer abstention over answering incorrectly. 
 While recent AVQA models have high accuracy, their ability to identify when they are likely wrong and their consequent abstention from answering remain underexplored areas of research. To fill this gap, we explore several approaches and then propose Adaptive Confidence Refinement (ACR), a lightweight method to further enhance the performance of $\mathcal{R}$-AVQA. Our key insight is that the Maximum Softmax Probability (MSP) is Bayes-optimal only under strong calibration, a condition usually not met in deep neural networks, particularly in multimodal models. Instead of replacing MSP, our ACR maintains it as a primary confidence signal and applies input-adaptive residual corrections when MSP is deemed unreliable. ACR introduces two learned heads: i) a Residual Risk Head that predicts low-magnitude correctness residuals that MSP does not capture, and ii) a Confidence Gating Head to determine MSP trustworthiness. Our experiments and theoretical analysis show that ACR consistently outperforms existing methods on in- and out-of-disrtibution, and data bias settings across three different AVQA architectures, establishing a solid foundation for $\mathcal{R}$-AVQA task.
 <p align="center"> <img src="figures/architecture.png" width="800" align="center"> </p>
